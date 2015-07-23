@@ -1,5 +1,6 @@
-package obs;
+package obs.subject;
 
+import obs.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import rx.Observable;
@@ -10,8 +11,9 @@ public class Service1 {
     public Observable<String> operation() {
         return Observable.<String>create(s -> {
             logger.info("Start: Executing slow task in Service 1");
+            s.onNext("getData 1 start");
             Util.delay(7000);
-            s.onNext("operation 1");
+            s.onNext("getData 1 end");
             logger.info("End: Executing slow task in Service 1");
             s.onCompleted();
         }).subscribeOn(Schedulers.computation());
