@@ -4,7 +4,7 @@ version := "1.0"
 
 organization := "org.bk"
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.7"
 
 libraryDependencies += "io.reactivex" % "rxjava" % "1.0.11"
 
@@ -15,6 +15,8 @@ libraryDependencies += "com.google.guava" % "guava" % "18.0"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
 
 libraryDependencies += "ch.qos.logback" % "logback-core" % "1.1.2"
+
+libraryDependencies += "io.projectreactor" % "reactor-core" % "2.5.0.M3"
 
 libraryDependencies += "junit" % "junit" % "4.12" % "test"
 
